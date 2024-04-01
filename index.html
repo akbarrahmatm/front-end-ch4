@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halo</title>
+
+    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="main d-flex">
+        <div class="sidebar">
+            <a href="">
+                <img class="logo" src="./assets/img/logo.svg" alt="">
+            </a>
+            <div class="sidebar-item">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img class="sidebar-item-icon" src="./assets/img/fi_home.svg" alt="">
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="">
+                            <img class="sidebar-item-icon" src="./assets/img/fi_truck.svg" alt="">
+                            <p>Cars</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content w-100">
+            <nav class="navbar navbar-expand-lg bg-body-white  m-0 p-0">
+                <div class="container-fluid m-0 p-0">
+                    <a class="navbar-brand m-0 p-0" href="#">
+                        <img class="logo-inner" src="./assets/img/logo_inner.svg" alt="Logo" width="100" height="34"
+                            class="d-inline-block align-text-top">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <button class="nav-link">
+                                    <img class="menu-icon" src="./assets/img/fi_menu.svg" alt="Menu">
+                                </button>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <div class="search-container">
+                                <input class="form-control search-input" type="text" name="search" id="search"
+                                    placeholder="Search">
+                                <button class="btn btn-outline-custom">Search</button>
+                            </div>
+                        </form>
+
+                        <div class="d-flex">
+
+                            <button class="btn profile">
+                                <img class="profile-picture rounded-circle" src="./assets/img/profile_picture.jpg"
+                                    alt="Profile Picture">
+                                Unis Badri
+                                <img class="arrow-down" src="./assets/img/fi_chevron-down.svg" alt="Chevron Down">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="row m-0 p-0">
+                <div class="col m-0 p-0 sidebar-inner">
+                    <p>Cars</p>
+                    <ul class="sidebar-inner-item">
+                        <li>
+                            <a href="">List Car</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col container-content">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb ">
+                            <li class="breadcrumb-item"><a href="#">Cars</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">List Car</li>
+                        </ol>
+                    </nav>
+
+                    <!-- Alert -->
+                    <div class="alert alert-custom alert-primary-custom text-center" role="alert">
+                        A simple secondary alert—check it out!
+                    </div>
+
+                    <div class="row">
+                        <div class="col my-auto">
+                            <h3 class="page-title">List Car</h3>
+
+
+                        </div>
+                        <div class="col text-end">
+                            <button class="btn btn-custom-primary ">+ Add New Car</button>
+                        </div>
+                    </div>
+                    <div class="filter-menu">
+                        <ul>
+                            <li>
+                                <a class="btn btn-custom-filter active" disabled href="">All</a>
+                            </li>
+                            <li>
+                                <a class="btn btn-custom-filter" href="">Small</a>
+                            </li>
+                            <li>
+                                <a class="btn btn-custom-filter" href="">Medium</a>
+                            </li>
+                            <li>
+                                <a class="btn btn-custom-filter" href="">Large</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="car-card">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="card m-card">
+                                    <img src="./assets/img/car_image.png" class="card-img-top" alt="Car Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nama/Tipe Mobil</h5>
+                                        <h5 class="card-subtitle">Rp 430.000 / hari</h5>
+                                        <h5 class="card-updated-time">
+                                            <img src="./assets/img/fi_clock.svg" alt="Clock">
+                                            Updated at 4 Apr 2022, 09.00
+                                        </h5>
+                                        <div class="row button-action">
+                                            <div class="col-6">
+                                                <button data-bs-toggle="modal" data-bs-target="#modal{id}"
+                                                    class="btn w-100 btn-outline-danger btn-outline-delete text-center"
+                                                    href="">
+                                                    <img src="./assets/img/fi_trash.svg" alt="Delete Icon">
+                                                    Delete
+                                                </button>
+                                            </div>
+                                            <div class="col-6">
+                                                <a class="btn w-100 btn-success btn-edit text-center"
+                                                    href="update.html">
+                                                    <img src="./assets/img/fi_edit.svg" alt="Edit Icon">
+                                                    Edit
+                                                </a>
+                                            </div>
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="modal{id}" tabindex="-1"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                    <div class="modal-content">
+
+                                                        <div class="modal-body text-center">
+                                                            <img class="modal-img" src="./assets/img/img_modal.png"
+                                                                alt="Modal image">
+                                                            <h4 class="modal-title">Menghapus Data Mobil</h4>
+                                                            <h5 class="modal-text">Setelah dihapus, data mobil tidak
+                                                                dapat
+                                                                dikembalikan. Yakin ingin menghapus?</h5>
+                                                            <div>
+                                                                <a href="delete/id"
+                                                                    class="btn btn-custom-primary btn-accept w-auto mx-1">
+                                                                    Ya
+                                                                </a>
+                                                                <button data-bs-dismiss="modal"
+                                                                    class="btn btn-outline-custom btn-cancel w-auto mx-1">
+                                                                    Tidak
+                                                                </button>
+
+                                                            </div>
+
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./vendor/bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
